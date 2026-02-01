@@ -15,25 +15,47 @@
             <h1>SU.KI</h1>
             <p>Personalized sunscreen recommendation in real-time</p>
         </div>
+   <div class="container">
 
-        <div class="container">
-            <div class="camera">
-                <img src="/video" class="video">
+    <!-- LEFT: Camera Section -->
+    <div class="camera-section">
+
+        <div class="camera">
+            <div id="cameraPlaceholder" class="camera-placeholder">
+                Camera is OFF<br>
+                Click "Start Scan"
             </div>
 
-            <div class="info-card">
-                <h2>Skin Analysis</h2>
-                <div class="result">
-                    <p><b>Skin Tone:</b> <span id="skin">Detecting...</span></p>
-                    <p><b>Skin Type:</b> <span id="skin_type">Detecting...</span></p>
-                    <p><b>SPF Recommendation:</b> <span id="rec">Detecting...</span></p>
-                    <p><b>Suggested Brand:</b> <span id="brand">Detecting...</span></p>
-                </div>
-                <button class="dispense-btn" onclick="dispense()">🧴 Dispense Sunscreen</button>
-                <p id="status" class="status"></p>
-            </div>
+            <img id="cameraFeed" class="video" style="display:none;">
         </div>
+
+        <div class="scan-controls">
+            <button class="dispense-btn start-btn" onclick="startScan()">▶ Start Scan</button>
+            <button class="dispense-btn stop-btn" onclick="stopScan()">⏹ Stop Scan</button>
+        </div>
+
     </div>
+
+    <!-- RIGHT: Skin Analysis -->
+    <div class="info-card">
+        <h2>Skin Analysis</h2>
+        <div class="result">
+            <p><b>Skin Tone:</b> <span id="skin">Stopped</span></p>
+            <p><b>Skin Type:</b> <span id="skin_type">-</span></p>
+            <p><b>SPF Recommendation:</b> <span id="rec">-</span></p>
+            <p><b>Suggested Brand:</b> <span id="brand">-</span></p>
+        </div>
+        <button type="button" class="dispense-btn" onclick="dispense()">
+    🧴 Dispense Sunscreen
+</button>
+<p id="status" class="status"></p>
+
+
+    </div>
+
+</div>
+
+        
     <script src="/static/script.js"></script>
 </body>
 </html>

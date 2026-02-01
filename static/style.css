@@ -50,9 +50,17 @@ body {
     padding: 20px 30px;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    width: 320px;
+
+    width: 420px;      /* match camera width */
+    height: 300px;     /* match camera height */
+
     text-align: left;
+
+    display: flex;             /* 👇 important */
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 
 .info-card h2 {
     margin-top: 0;
@@ -102,4 +110,111 @@ body {
     border-radius: 50%;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
     background: white;
+}
+
+.scan-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.scan-controls .dispense-btn {
+    width: 220px;
+}
+
+/* Stop button styling */
+.stop-btn {
+    background: #9e9e9e;
+}
+
+.stop-btn:hover {
+    background: #7d7d7d;
+}
+
+/* Ensure camera box always has size */
+.camera {
+    width: 420px;
+}
+
+/* Placeholder when camera is off */
+.camera-placeholder {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    border: 3px solid #ff9f00;
+    background: #f2f2f2;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Main layout */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Left block (camera + buttons) */
+.camera-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Camera box */
+.camera {
+    width: 420px;
+}
+
+.video,
+.camera-placeholder {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    border: 3px solid #ff9f00;
+}
+
+/* Placeholder */
+.camera-placeholder {
+    background: #f2f2f2;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Scan buttons */
+.scan-controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.scan-controls .dispense-btn {
+    width: 220px;
+}
+
+.stop-btn {
+    background: #9e9e9e;
+}
+
+.stop-btn:hover {
+    background: #7d7d7d;
+}
+.status {
+    margin-top: 12px;
+    font-weight: 600;
+    color: green;
 }
