@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Sunscreen Dispenser</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="overlay">
+        <div class="top-logo">
+    <img src="/static/images/suki_logo.png" alt="SU.KI Logo">
+</div>
+
+        <div class="header">
+            <h1>SU.KI</h1>
+            <p>Personalized sunscreen recommendation in real-time</p>
+        </div>
+
+        <div class="container">
+            <div class="camera">
+                <img src="/video" class="video">
+            </div>
+
+            <div class="info-card">
+                <h2>Skin Analysis</h2>
+                <div class="result">
+                    <p><b>Skin Tone:</b> <span id="skin">Detecting...</span></p>
+                    <p><b>Skin Type:</b> <span id="skin_type">Detecting...</span></p>
+                    <p><b>SPF Recommendation:</b> <span id="rec">Detecting...</span></p>
+                    <p><b>Suggested Brand:</b> <span id="brand">Detecting...</span></p>
+                </div>
+                <button class="dispense-btn" onclick="dispense()">🧴 Dispense Sunscreen</button>
+                <p id="status" class="status"></p>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
